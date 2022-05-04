@@ -16,5 +16,40 @@ code {
 }
 .tabla {
   text-align: center;
-margin-left: 80px;
+  width: 70%;
+  margin-left: 120px;
+  height: auto;
+  margin-top: 90px;
+}
+#Agregar {
+  margin-left: 5px;
+  border-radius: 40px 20px;
+}
+#Eliminar {
+  margin-left: 5px;
+  border-radius: 40px 20px;
+  background: red;
+}
+#Actualizar {
+  margin-left: 5px;
+  border-radius: 40px 20px;
+}
+#Editar {
+  margin-left: 5px;
+  border-radius: 40px 20px;
+}
+.InArriba {
+  margin-left: 100px;
+  margin-top: 15px;
+}
+.div {
+  text-align: center;
+  margin-top: 20px;
+}
+.Input {
+  border: 2px solid;
+  border-radius: 50px 20px;
+}
+#h2{
+  font-weight: 800;
 }
