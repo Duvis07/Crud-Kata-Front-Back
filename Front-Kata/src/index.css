@@ -24,6 +24,7 @@ code {
 #Agregar {
   margin-left: 5px;
   border-radius: 40px 20px;
+  width: 110px;
 }
 #Eliminar {
   margin-left: 5px;
@@ -33,6 +34,7 @@ code {
 #Actualizar {
   margin-left: 5px;
   border-radius: 40px 20px;
+  width: 110px;
 }
 #Editar {
   margin-left: 5px;
@@ -48,8 +50,10 @@ code {
 }
 .Input {
   border: 2px solid;
-  border-radius: 50px 20px;
+  border-radius: 30px 20px;
+  height: 42px;
+  width: 220px;
 }
-#h2{
+#h2 {
   font-weight: 800;
 }

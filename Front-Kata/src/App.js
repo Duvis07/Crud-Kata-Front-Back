@@ -1,195 +1,17 @@
 import React, {
   createContext,
   Fragment,
-  useContext,
-  useEffect,
   useReducer,
-  useRef,
-  useState,
 } from "react";
+import { Form } from "./Form";
+import { List } from "./List";
 
-const HOST_API = "http://localhost:8080/api";
+export const HOST_API = "http://localhost:8080/api";
 const initialState = {
   list: [],
   item: {},
 };
-const Store = createContext(initialState);
-
-const Form = () => {
-  const formRef = useRef(null);
-  const {
-    dispatch,
-    state: { item },
-  } = useContext(Store);
-  const [state, setState] = useState({ item });
-
-  const onAdd = (event) => {
-    // event.preventDefault();
-
-    const request = {
-      name: state.name,
-      id: null,
-      isCompleted: false,
-    };
-
-    fetch(HOST_API + "/todo", {
-      method: "POST",
-      body: JSON.stringify(request),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((todo) => {
-        dispatch({ type: "add-item", item: todo });
-        setState({ name: "" });
-        formRef.current.reset();
-      });
-  };
-
-  const onEdit = (event) => {
-    // event.preventDefault();
-
-    const request = {
-      name: state.name,
-      id: item.id,
-      isCompleted: item.isCompleted,
-    };
-
-    fetch(HOST_API + "/todo", {
-      method: "PUT",
-      body: JSON.stringify(request),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((todo) => {
-        dispatch({ type: "update-item", item: todo });
-        setState({ name: "" });
-        formRef.current.reset();
-      });
-  };
-
-  return (
-    <form ref={formRef} className="InArriba">
-      <input
-        className="Input"
-        placeholder="Agrega una Tarea"
-        type="text"
-        name="name"
-        defaultValue={item.name}
-        onChange={(event) => {
-          setState({ ...state, name: event.target.value });
-        }}
-      ></input>
-      {item.id && (
-        <button id="Actualizar" class="btn btn-primary" onClick={onEdit}>
-          Actualizar
-        </button>
-      )}
-      {!item.id && (
-        <button id="Agregar" class="btn btn-primary" onClick={onAdd}>
-          Agregar
-        </button>
-      )}
-    </form>
-  );
-};
-
-const List = () => {
-  const { dispatch, state } = useContext(Store);
-
-  useEffect(() => {
-    fetch(HOST_API + "/todos")
-      .then((response) => response.json())
-      .then((list) => {
-        dispatch({ type: "update-list", list });
-      });
-  }, [state.list.length, dispatch]);
-
-  const onDelete = (id) => {
-    fetch(HOST_API + "/" + id + "/todo", {
-      method: "DELETE",
-    }).then((list) => {
-      dispatch({ type: "delete-item", id });
-    });
-  };
-
-  const onEdit = (todo) => {
-    dispatch({ type: "edit-item", item: todo });
-  };
-
-  const onChange = (event, todo) => {
-    const request = {
-      name: todo.name,
-      id: todo.id,
-      completed: event.target.checked,
-    };
-    fetch(HOST_API + "/todo", {
-      method: "PUT",
-      body: JSON.stringify(request),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((response) => response.json())
-      .then((todo) => {
-        dispatch({ type: "update-item", item: todo });
-      });
-  };
-
-  return (
-    <div className="tabla">
-      <table class="table table-hover">
-        <thead class="thead-light">
-          <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">¿Esta completado?</th>
-            <th scope="col">Borrar</th>
-            <th scope="col">Editar</th>
-          </tr>
-        </thead>
-        <tbody>
-          {state.list.map((todo) => (
-            <tr>
-              <td>{todo.id}</td>
-              <td className={todo.completed ? "aceptado" : {}}>{todo.name}</td>
-              <td>
-                <input
-                  type="checkbox"
-                  defaultChecked={todo.completed}
-                  onChange={(event) => onChange(event, todo)}
-                ></input>
-              </td>
-              <td>
-                <button
-                  id="Eliminar"
-                  type="button"
-                  class="btn btn-danger"
-                  onClick={() => onDelete(todo.id)}
-                >
-                  Eliminar
-                </button>
-              </td>
-
-              <td>
-                <button
-                  id="Editar"
-                  class="btn btn-primary"
-                  onClick={() => onEdit(todo)}
-                >
-                  Editar
-                </button>
-              </td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
-    </div>
-  );
-};
+export const Store = createContext(initialState);
 
 function reducer(state, action) {
   switch (action.type) {
@@ -231,7 +53,7 @@ function App() {
   return (
     <Fragment>
       <div className="div">
-        <h2 id="h2">CRUD-ITEM</h2>
+        <h2 id="h2">CRUD-KATA</h2>
       </div>
       <StoreProvider>
         <Form />
