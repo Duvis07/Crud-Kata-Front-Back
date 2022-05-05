@@ -9,6 +9,7 @@ Buenas tardes se adjunta la solucion de dicha actividad.
 2-->se hace la funcionalidad del check-list o completado
 ![image](https://user-images.githubusercontent.com/96325513/167001440-4ee86897-1210-4f16-810d-1d34d37f5532.png)
 
+3-->se refactoriza el proyecto
 ![image](https://user-images.githubusercontent.com/96325513/167024982-522687f2-e605-404b-9d92-99af5cba4f91.png)
 
 ![image](https://user-images.githubusercontent.com/96325513/167025046-4c0db308-10f2-426a-a777-927727a3b5f7.png)
