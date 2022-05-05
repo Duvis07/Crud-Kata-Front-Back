@@ -10,6 +10,7 @@
 
 
 Preguntas-->
+
 1-->¿Debería usar Hooks, clases, o una mezcla de ambos?
 
 2-->¿Qué son los React Hooks?
