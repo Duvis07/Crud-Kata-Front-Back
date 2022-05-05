@@ -9,3 +9,11 @@
 ![image](https://user-images.githubusercontent.com/96325513/167001440-4ee86897-1210-4f16-810d-1d34d37f5532.png)
 
 
+Preguntas-->
+1-->¿Debería usar Hooks, clases, o una mezcla de ambos?
+2-->¿Qué son los React Hooks?
+3-->¿Que es el reducer?
+4-->¿Que es el Store provider?
+5-->¿Que es fetch?
+
+
