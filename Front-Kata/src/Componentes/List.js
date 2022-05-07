@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import { Store, HOST_API } from "../HOST_API";
+import { Store, HOST_API } from "../Conexion/HOST_API";
 
 export const List = () => {
   const { dispatch, state } = useContext(Store);
