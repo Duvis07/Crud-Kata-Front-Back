@@ -1,8 +1,5 @@
-import React, {
-  useContext,
-  useEffect
-} from "react";
-import { Store, HOST_API } from "../App";
+import React, { useContext, useEffect } from "react";
+import { Store, HOST_API } from "../HOST_API";
 
 export const List = () => {
   const { dispatch, state } = useContext(Store);
@@ -97,4 +94,3 @@ export const List = () => {
     </div>
   );
 };
-

@@ -1,13 +1,11 @@
-import React, {
-  useContext, useRef,
-  useState
-} from "react";
-import { Store, HOST_API } from "../App";
+import React, { useContext, useRef, useState } from "react";
+import { Store, HOST_API } from "../HOST_API";
 
 export const Form = () => {
   const formRef = useRef(null);
   const {
-    dispatch, state: { item },
+    dispatch,
+    state: { item },
   } = useContext(Store);
   const [state, setState] = useState({ item });
 
