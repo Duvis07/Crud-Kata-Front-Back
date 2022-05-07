@@ -2,7 +2,7 @@ import React, {
   useContext, useRef,
   useState
 } from "react";
-import { Store, HOST_API } from "./App";
+import { Store, HOST_API } from "../App";
 
 export const Form = () => {
   const formRef = useRef(null);

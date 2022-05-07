@@ -5,6 +5,12 @@ import co.com.sofka.crud.services.TodoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * la clase controlador es responsable de procesar las solicitudes
+ *
+ * @RestController es un tipo de controller que reciben peticiones con un formato de específico que cumple
+ * con formatos de solicitud RESTful habitualmente son JSON
+ */
 @RestController
 @CrossOrigin(origins = "http://localhost:3000/")
 public class TodoController {
@@ -13,10 +19,14 @@ public class TodoController {
     private TodoService todoService;
 
 
+    /**
+     * Metodos Crud con sus correspondientes endpoints
+     * @return
+     */
+
     @GetMapping(value = "api/todos")
     public Iterable<TodoModel> list() {
         return todoService.list();
-
     }
 
     @PostMapping(value = "api/todo")
@@ -31,9 +41,7 @@ public class TodoController {
 
         }
         throw new RuntimeException("No existe el id para actualizar");
-
     }
-
 
     @DeleteMapping(value = "api/{id}/todo")
     public void delete(@PathVariable("id") Long id) {

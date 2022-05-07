@@ -3,8 +3,8 @@ import React, {
   Fragment,
   useReducer,
 } from "react";
-import { Form } from "./Form";
-import { List } from "./List";
+import { Form } from "./Componentes/Form";
+import { List } from "./Componentes/List";
 
 export const HOST_API = "http://localhost:8080/api";
 const initialState = {

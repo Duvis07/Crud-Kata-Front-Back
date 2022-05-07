@@ -5,6 +5,10 @@ import co.com.sofka.crud.repositories.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+/**
+ * Esta clase habitualmente se conecta a varios repositorios y agrupa su funcionalidad
+ * Esta clase realiza algún servicio, como ejecutar lógica de negocios, realizar cálculos o llamar a API externas.
+ */
 @Service
 public class TodoService {
 

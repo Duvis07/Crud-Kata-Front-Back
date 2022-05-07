@@ -4,6 +4,11 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+
+/**
+ * Entidad que especifica que la clase es una entidad y está asignada a una tabla de base de datos
+ */
+
 @Entity
 public class TodoModel {
 
@@ -13,6 +18,11 @@ public class TodoModel {
     private  String name;
     private  Boolean isCompleted;
 
+
+    /**
+     * Metododos get y set
+     * @return
+     */
 
     public Long getId() {
         return id;
