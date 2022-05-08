@@ -1,6 +1,11 @@
 import React, { useContext, useEffect } from "react";
 import { Store, HOST_API } from "../Conexion/HOST_API";
 
+/**
+ * @author Duvan Botero
+ * List arroja toda la informacion del formulario
+ * @returns
+ */
 export const List = () => {
   const { dispatch, state } = useContext(Store);
 
@@ -11,6 +16,13 @@ export const List = () => {
         dispatch({ type: "update-list", list });
       });
   }, [state.list.length, dispatch]);
+
+  /**
+   * @author Duvan Botero
+   *
+   * onDelete elimina elementos a la lista
+   *
+   */
 
   const onDelete = (id) => {
     fetch(HOST_API + "/" + id + "/todo", {
@@ -42,7 +54,11 @@ export const List = () => {
         dispatch({ type: "update-item", item: todo });
       });
   };
-
+  /**
+   * @author Duvan Botero
+   * tabla con sus correspondientes campos, utlizada para mostrar los campos
+   * arrojados por el formulario
+   */
   return (
     <div className="tabla">
       <table class="table table-hover">

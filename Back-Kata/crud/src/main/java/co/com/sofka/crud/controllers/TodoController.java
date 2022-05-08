@@ -6,9 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
+ * @author Duvan Botero
  * la clase controlador es responsable de procesar las solicitudes
- *
- * @RestController es un tipo de controller que reciben peticiones con un formato de específico que cumple
+ * controller que recibe peticiones con un formato de específico que cumple
  * con formatos de solicitud RESTful habitualmente son JSON
  */
 @RestController
@@ -20,8 +20,8 @@ public class TodoController {
 
 
     /**
+     * @Author Duvan Botero
      * Metodos Crud con sus correspondientes endpoints
-     * @return
      */
 
     @GetMapping(value = "api/todos")

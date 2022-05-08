@@ -6,7 +6,8 @@ import javax.persistence.Id;
 
 
 /**
- * Entidad que especifica que la clase es una entidad y está asignada a una tabla de base de datos
+ * @author Duvan Botero
+ * TodoModel contiene atributos con sus correspondientes metodos get y set
  */
 
 @Entity

@@ -1,3 +1,11 @@
+/**
+ * @author Duvan Botero
+ * Se establecen  los estados para reducer
+ *
+ * @param {*} state
+ * @param {*} action
+ * @returns
+ */
 export function reducer(state, action) {
   switch (action.type) {
     case "update-item":

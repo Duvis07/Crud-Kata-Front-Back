@@ -9,6 +9,12 @@ export const Form = () => {
   } = useContext(Store);
   const [state, setState] = useState({ item });
 
+  /**
+   * @author Duvan Botero
+   *
+   * onAdd agrega elementos a la lista
+   */
+
   const onAdd = (event) => {
     const request = {
       name: state.name,
@@ -31,6 +37,13 @@ export const Form = () => {
       });
   };
 
+  /**
+   * @author Duvan Botero
+   *
+   * onEdit edita elementos de la lista
+   *
+   */
+
   const onEdit = (event) => {
     const request = {
       name: state.name,
@@ -52,7 +65,10 @@ export const Form = () => {
         formRef.current.reset();
       });
   };
-
+  /**
+   * @author Duvan Botero
+   * formulario para agregar una tarea
+   */
   return (
     <form ref={formRef} className="InArriba">
       <input
