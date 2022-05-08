@@ -10,7 +10,8 @@ Buenas tardes se adjunta la solucion de dicha actividad.
 ![image](https://user-images.githubusercontent.com/96325513/167001440-4ee86897-1210-4f16-810d-1d34d37f5532.png)
 
 3-->se refactoriza el proyecto
-![image](https://user-images.githubusercontent.com/96325513/167024982-522687f2-e605-404b-9d92-99af5cba4f91.png)
+![image](https://user-images.githubusercontent.com/96325513/167278632-fb721a3d-5b6b-465a-b868-02f201af4c54.png)
+
 
 ![image](https://user-images.githubusercontent.com/96325513/167025046-4c0db308-10f2-426a-a777-927727a3b5f7.png)
 
@@ -31,7 +32,7 @@ Preguntas-->
 
 Link Video-->
 
-https://drive.google.com/file/d/1tkDNTBfF80lH_kRsiZxMYUuvXD-M80sw/view?usp=sharing
+https://drive.google.com/file/d/1Sj2UjnBFnqVF-L0JXHQOlJaaNe7Siu70/view
 
 Autor--> Duvan Arley Botero Rivillas
 
